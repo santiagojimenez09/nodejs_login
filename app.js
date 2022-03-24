@@ -21,9 +21,10 @@ app.use(session({
     saveUninitialized: true
 }));
 
+const connection = require('./database/db');
 
 app.get('/',(req, res)=>{
-    res.send('Hola programacion');
+    res.render('index');
 })
 
 app.listen(3000, (req, res)=>{
